@@ -16,6 +16,7 @@ const DashBoard = () => {
       body:JSON.stringify({admin: loggedInUser.email})
       //admin:`programminghero001@gmail.com`
       //`programminghero001@gmail.com`
+      //loggedInUser.email
     })
     .then((res) => res.json())
      .then((data) => setIsAdmin(data))

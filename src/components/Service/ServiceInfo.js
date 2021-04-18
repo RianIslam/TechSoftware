@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import Service from './Service'
 
@@ -32,7 +33,11 @@ const ServiceInfo = () => {
     return (
         <section className="bg-light">
         <div className="container py-5">
-        <h1 className="text-center display-4">What We Do</h1>
+        <motion.h1
+         initial={{x:-10,y:20}}
+                    animate={{x:20,y:-10}}
+                    transition={{delay:0.4,duration:0.4}}
+         className="text-center display-4">Our Services</motion.h1>
         <div className="row">
             {
                 services.map(infoser => <Service infoser={infoser}/>)

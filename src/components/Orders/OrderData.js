@@ -43,10 +43,11 @@ const OrderData = () => {
           </div>
           <div className="col-md-3">
             <h5>
-              <strong>Your Total Service</strong>
+              <strong>Status</strong>
             </h5>
-            <h6>{orders.length}</h6>
+            <h6>Panding</h6>
           </div>
+          
         </div>
       </div>
 
