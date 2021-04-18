@@ -1,0 +1,7 @@
+.homebackground{
+    background-image: url(../../img/headermainbgdark.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
