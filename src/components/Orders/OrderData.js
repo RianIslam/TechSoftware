@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../../App'
+import FooterInfo from '../Shared/Footer/FooterInfo'
 
 const OrderData = () => {
 
@@ -14,7 +15,8 @@ const OrderData = () => {
 
 
     return (
-        <div className="container">
+      <div className="container-fluid">
+      <div className="container">
       <h2 className="text-center text-danger p-5"><strong>Your total Order is {orders.length}</strong> </h2>
       {orders.map((load) => (
 
@@ -51,6 +53,8 @@ const OrderData = () => {
 
           
       ))}
+    </div>
+    <FooterInfo/>
     </div>
     )
 }

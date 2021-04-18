@@ -15,6 +15,7 @@ const DashBoard = () => {
       headers:{'content-type':'application/json'},
       body:JSON.stringify({admin: loggedInUser.email})
       //admin:`programminghero001@gmail.com`
+      //`programminghero001@gmail.com`
     })
     .then((res) => res.json())
      .then((data) => setIsAdmin(data))
@@ -32,13 +33,14 @@ const DashBoard = () => {
             <h5>Orders</h5>
           </Link>
         </li>
-
-       {isAdmin && <div>
         <li className="nav-item text-center">
           <Link className="nav-link" to="/reviewform">
             <h5>Review</h5>
           </Link>
         </li>
+
+       {isAdmin && <div>
+        
         <li className="nav-item text-center">
           <Link className="nav-link active" to="/serviceform">
             <h5>Add Service</h5>

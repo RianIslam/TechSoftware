@@ -32,17 +32,20 @@ const ManageData = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-4">
-          <DashBoard />
-        </div>
-        <div className="col-md-8">
-          {manage.map((de) => (
+    <div className="container">
+     <h1 className="text-center">Admin Can Manage</h1>
+        <div className="col-md-12">
+        <div className="row">
+        {manage.map((de) => (
             <DeleteData de={de} />
           ))}
         </div>
-      </div>
-      <FooterInfo/>
+          
+        </div>
+     
+      
+    </div>
+    <FooterInfo/>
     </div>
   );
 };
