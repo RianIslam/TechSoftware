@@ -9,7 +9,7 @@ const ShipMent = () => {
   const [pays, setPays] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://ancient-coast-34039.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setPays(data));
   }, []);
@@ -22,7 +22,7 @@ const ShipMent = () => {
   const handleOrder =()=>{
     const newAdded ={...loggedInUser, nameservice: servicetitle}
     console.log(newAdded)
-    fetch('http://localhost:5000/order',{
+    fetch('https://ancient-coast-34039.herokuapp.com/order',{
       method:'POST',
       headers:{'Content-Type': 'application/json'},
       body:JSON.stringify(newAdded)

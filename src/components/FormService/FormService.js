@@ -35,7 +35,7 @@ const FormService = () => {
       description: data.description,
       imageURL: imageURL,
     };
-    const url = `http://localhost:5000/addService`;
+    const url = `https://ancient-coast-34039.herokuapp.com/addService`;
     console.log(eventData);
     fetch(url, {
       method: "POST",

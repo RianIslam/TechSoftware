@@ -3,7 +3,7 @@ import React from 'react'
 const DeleteData = ({de}) => {
 
     const deleteEvent = (id) => {
-        fetch(`http://localhost:5000/deleteEvent/${id}`, {
+        fetch(`https://ancient-coast-34039.herokuapp.com/deleteEvent/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

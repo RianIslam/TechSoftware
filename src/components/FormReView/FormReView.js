@@ -30,7 +30,7 @@ const FormReView = () => {
       review: data.review,
       imageURL: imageURL,
     };
-    const url = `http://localhost:5000/addReview`;
+    const url = `https://ancient-coast-34039.herokuapp.com/addReview`;
     console.log(eventData);
     fetch(url, {
       method: "POST",

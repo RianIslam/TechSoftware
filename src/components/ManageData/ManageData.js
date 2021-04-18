@@ -14,7 +14,7 @@ const ManageData = () => {
 
   // useEffect(()=>{
 
-  //   fetch("http://localhost:5000/manageAll",{
+  //   fetch("https://ancient-coast-34039.herokuapp.com/manageAll",{
   //     method:'POST',
   //     headers:{'content-type':'application/json'},
   //     body:JSON.stringify({email: loggedInUser.email})
@@ -25,7 +25,7 @@ const ManageData = () => {
   // },[])
 
   useEffect(() => {
-    fetch("http://localhost:5000/manageAll")
+    fetch("https://ancient-coast-34039.herokuapp.com/manageAll")
       .then((res) => res.json())
       .then((data) => setManage(data))
   }, []);

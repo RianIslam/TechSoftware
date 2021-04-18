@@ -10,7 +10,7 @@ const DashBoard = () => {
   
    useEffect(()=>{
 
-    fetch("http://localhost:5000/isAdmin",{
+    fetch("https://ancient-coast-34039.herokuapp.com/isAdmin",{
       method:'POST',
       headers:{'content-type':'application/json'},
       body:JSON.stringify({admin: loggedInUser.email})
