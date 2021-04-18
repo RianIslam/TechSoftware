@@ -18,6 +18,7 @@ import DashBoard from './components/DashBoard/DashBoard';
 import OrderData from './components/Orders/OrderData';
 import FooterInfo from './components/Shared/Footer/FooterInfo';
 import ManageData from './components/ManageData/ManageData';
+import DashBoardMain from './components/DashBoard/DashBoardMain';
 
 export const UserContext = createContext();
 
@@ -32,27 +33,27 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route exact path="/service/:servicetitle">
+          <PrivateRoute exact path="/service/:servicetitle">
             <ShipMent/>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/login">
             <Login/>
           </Route>
-          <Route  exact path="/serviceform">
+          <PrivateRoute  exact path="/serviceform">
             <FormService/>
-          </Route>
-          <Route  exact path="/reviewform">
+          </PrivateRoute>
+          <PrivateRoute  exact path="/reviewform">
             <FormReView/>
-          </Route>
-          <Route  exact path="/orders">
+          </PrivateRoute>
+          <PrivateRoute  exact path="/orders">
             <OrderData/>
-          </Route>
-          <Route  exact path="/dashboard">
-            <DashBoard/>
-          </Route>
-          <Route  exact path="/manage">
+          </PrivateRoute>
+          <PrivateRoute  exact path="/dashboard">
+            <DashBoardMain/>
+          </PrivateRoute>
+          <PrivateRoute  exact path="/manage">
             <ManageData/>
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>

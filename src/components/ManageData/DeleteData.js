@@ -35,7 +35,7 @@ const DeleteData = ({de}) => {
             <h5>
               <strong>Service</strong>
             </h5>
-            <h6>${nameservice}</h6>
+            <h6>{nameservice}</h6>
           </div>
           <div className="col-md-3">
           <strong>Action</strong>

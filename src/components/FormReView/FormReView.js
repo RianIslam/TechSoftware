@@ -45,17 +45,20 @@ const FormReView = () => {
       <div className="container-fluid py-5">
         <div className="row">
           <DashBoard />
-          <div className="col-md-8 bg-secondary rounded">
+          <div className="col-md-8 p-3">
             <h1 className="text-center">Review</h1>
             <div className="d-flex justify-content-center align-items-center">
             <form onSubmit={handleSubmit(onSubmit)}>
+            <h6><strong>Add Name</strong></h6>
               <input name="name" placeholder="name" {...register("name")} />
+              <h6><strong>Add Review</strong></h6>
               <input
                 name="review"
                 placeholder="review"
                 {...register("review")}
               />
-
+              
+              <h6><strong>Add Your Photo</strong></h6>
               <input
                 style={{
                   border: "none",

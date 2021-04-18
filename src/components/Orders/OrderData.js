@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { UserContext } from '../../App'
 
 const OrderData = () => {
 
+  const [loggedInUser,setLoggedInUser] = useContext(UserContext)
+
     const [orders,setOrders] =  useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/addOrder')
+        fetch("http://localhost:5000/addOrder?email="+loggedInUser.email)
         .then(res => res.json())
         .then(data => setOrders(data))
     },[])
