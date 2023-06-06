@@ -30,7 +30,7 @@ const FormReView = () => {
       review: data.review,
       imageURL: imageURL,
     };
-    const url = `https://ancient-coast-34039.herokuapp.com/addReview`;
+    const url = `https://techsoft-backend.vercel.app/addReview`;
     console.log(eventData);
     fetch(url, {
       method: "POST",

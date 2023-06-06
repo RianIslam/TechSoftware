@@ -10,7 +10,7 @@ const DashBoard = () => {
   
    useEffect(()=>{
 
-    fetch("https://ancient-coast-34039.herokuapp.com/isAdmin",{
+    fetch("https://techsoft-backend.vercel.app/isAdmin",{
       method:'POST',
       headers:{'content-type':'application/json'},
       body:JSON.stringify({admin: loggedInUser.email})

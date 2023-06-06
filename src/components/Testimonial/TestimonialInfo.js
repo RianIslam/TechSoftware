@@ -5,7 +5,7 @@ const TestimonialInfo = () => {
   const[reviews,setReviews] = useState([])
 
   useEffect(()=>{
-    fetch('https://ancient-coast-34039.herokuapp.com/reviews')
+    fetch('https://techsoft-backend.vercel.app/reviews')
     .then(res => res.json())
     .then(data => setReviews(data))
   },[])

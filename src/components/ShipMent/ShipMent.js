@@ -9,7 +9,7 @@ const ShipMent = () => {
   const [pays, setPays] = useState([]);
 
   useEffect(() => {
-    fetch("https://ancient-coast-34039.herokuapp.com/services")
+    fetch("https://techsoft-backend.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setPays(data));
   }, []);
@@ -22,7 +22,7 @@ const ShipMent = () => {
   const handleOrder =()=>{
     const newAdded ={...loggedInUser, nameservice: servicetitle}
     console.log(newAdded)
-    fetch('https://ancient-coast-34039.herokuapp.com/order',{
+    fetch('https://techsoft-backend.vercel.app/order',{
       method:'POST',
       headers:{'Content-Type': 'application/json'},
       body:JSON.stringify(newAdded)

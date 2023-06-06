@@ -35,7 +35,7 @@ const FormService = () => {
       description: data.description,
       imageURL: imageURL,
     };
-    const url = `https://ancient-coast-34039.herokuapp.com/addService`;
+    const url = `https://techsoft-backend.vercel.app/addService`;
     console.log(eventData);
     fetch(url, {
       method: "POST",
